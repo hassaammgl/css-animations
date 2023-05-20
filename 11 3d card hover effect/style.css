@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #343434;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    perspective: 1000px;
+}
+
+.box {
+    width: 300px;
+    height: 400px;
+    background: #ffffff url("https://rare-gallery.com/mocahbig/1406586-samurai-ninja-sword-artist-artwork-digital-art.jpg");
+    background-size: cover;
+    background-position: center;
+
+    transform: rotateX(70deg);
+    transform-style: preserve-3d;
+    transition: .5s;
+}
+
+.box::before {
+    content: '';
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    background: #ccc;
+    transform-origin: bottom;
+    transform: rotateX(90deg);
+}
+
+.box:hover {
+    transform: rotateX(0deg);
+}
